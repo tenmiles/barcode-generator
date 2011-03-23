@@ -23,6 +23,8 @@ module ActionView
 
       options.assert_valid_keys(VALID_BARCODE_OPTIONS)
       output_format = options[:output_format] ? options[:output_format] : DEFAULT_FORMAT
+      output_method = options[:output_method] ? options[:output_method] : DEFAULT_OUTPUT_METHOD
+      
 
       id.upcase!
       eps = "#{Rails.public_path}/images/barcodes/#{id}.eps"
